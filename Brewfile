@@ -11,6 +11,7 @@ brew "hub"
 brew "jq"
 brew "nvm"
 brew "rbenv"
+brew "go"
 cask "dotnet"
 
 if (/darwin/ =~ RUBY_PLATFORM) != nil 
