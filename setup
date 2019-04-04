@@ -10,6 +10,7 @@ fi
 ./config-ssh
 ./config-node
 ./config-func
+./config-rust
 ./config-netlify
 ./config-defaults
 ./config-src
