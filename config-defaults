@@ -2,9 +2,18 @@
 
 osascript -e 'tell application "System Preferences" to quit'
 
+# Dock
 defaults write com.apple.dock autohide -bool true
+
+# Image Capture
+defaults -currentHost write com.apple.ImageCapture disableHotPlug -bool true
+
+# Finder
+defaults write com.apple.finder AppleShowAllFiles -bool true
 defaults write com.apple.desktopservices DSDontWriteNetworkStores -bool true
 defaults write com.apple.desktopservices DSDontWriteUSBStores -bool true
-defaults -currentHost write com.apple.ImageCapture disableHotPlug -bool true
+
+# Time Machine
+defaults write com.apple.TimeMachine DoNotOfferNewDisksForBackup -bool true
 
 echo "Log out/in for some MacOS settings to take effect"
