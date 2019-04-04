@@ -1,0 +1,12 @@
+#!/bin/sh
+
+if [ `uname` = "Darwin" ]
+then
+  if [[ `fdesetup status` = "FileVault is On." ]]
+  then
+    echo "👍 FileVault is enabled, good."
+  else 
+    echo "⛔️ FileVault needs to be enabled."
+    sudo fdsetup enable
+  fi
+fi

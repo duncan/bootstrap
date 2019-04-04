@@ -9,4 +9,5 @@
 ./config-rust
 ./config-netlify
 ./config-defaults
+./config-filevault
 ./config-src
