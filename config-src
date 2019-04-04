@@ -1,0 +1,4 @@
+#!/bin/sh
+
+mkdir -p ~/Source
+touch ~/Source/.metadata_never_index

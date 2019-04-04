@@ -12,3 +12,4 @@ fi
 ./config-func
 ./config-netlify
 ./config-defaults
+./config-src
