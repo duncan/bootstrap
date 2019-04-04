@@ -1,0 +1,16 @@
+#!/bin/sh
+
+if test ! $(which brew)
+then
+  if [ `uname` = "Linux" ]
+  then
+    export USER=root
+    sh -c "$(curl -fsSL https://raw.githubusercontent.com/Linuxbrew/install/master/install.sh)"
+  else
+    /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)" < /dev/null
+  fi
+fi
+
+brew upgrade
+brew update
+brew bundle

@@ -1,0 +1,11 @@
+#!/bin/sh
+
+if test ! $(which netlify)
+then
+  npm install -g netlify-cli
+fi
+
+if test ! -f ~/.netlify/helper/bin/git-credential-netlify
+then
+  netlify plugins:install netlify-lm-plugin
+fi

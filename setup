@@ -1,0 +1,9 @@
+#!/bin/sh
+
+./config-brew
+./config-zsh
+./config-git
+./config-ssh
+./config-node
+./config-func
+./config-netlify
