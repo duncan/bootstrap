@@ -14,4 +14,4 @@ cat <<EOF > ~/.gitconfig
 [credential]
   helper = netlify
   helper = osxkeychain
-end
+EOF
