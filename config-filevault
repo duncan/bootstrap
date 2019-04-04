@@ -7,6 +7,6 @@ then
     echo "👍 FileVault is enabled, good."
   else 
     echo "⛔️ FileVault needs to be enabled."
-    sudo fdsetup enable
+    sudo fdsetup enable -user $USER
   fi
 fi
