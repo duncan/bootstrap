@@ -8,8 +8,21 @@ then
   else
     /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)" < /dev/null
   fi
-fi
+fi 
 
 brew upgrade
 brew update
 brew bundle
+
+# on both
+# brew cask install docker
+
+# on Mac
+# brew cask install visual-studio-code
+# brew cask install notion
+# brew cask install google-chrome
+# brew cask install slack
+# brew cask install microsoft-teams
+# brew cask install zoomus
+
+# brew install mas
