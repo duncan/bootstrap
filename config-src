@@ -1,4 +1,18 @@
 #!/bin/sh
 
-mkdir -p ~/Source
-touch ~/Source/.metadata_never_index
+
+
+if test ! $(which brew)
+then
+  if [ `uname` = "Darwin" ]
+  then
+    mkdir -p ~/Source
+    touch ~/Source/.metadata_never_index
+  else
+    mkdir -p ~/src
+  fi
+fi
+
+
+
+
