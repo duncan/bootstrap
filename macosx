@@ -17,3 +17,12 @@ defaults write com.apple.desktopservices DSDontWriteUSBStores -bool true
 defaults write com.apple.TimeMachine DoNotOfferNewDisksForBackup -bool true
 
 echo "Log out/in for some MacOS settings to take effect"
+
+# FileVault
+if [[ `fdesetup status` = "FileVault is On." ]]
+then
+echo "👍 FileVault is enabled, good."
+else 
+echo "⛔️ FileVault needs to be enabled."
+sudo fdsetup enable -user $USER
+fi

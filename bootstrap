@@ -3,11 +3,10 @@
 ./homebrew
 ./shell
 ./gitconfig
-./config-ssh
-./config-node
-./config-func
-./config-rust
+./sshconfig
+./javascript
+./azure
+./rust
 ./config-netlify
-./config-defaults
-./config-filevault
-./config-src
+./macosx
+./source
