@@ -2,7 +2,7 @@
 
 ./homebrew
 ./shell
-./config-git
+./gitconfig
 ./config-ssh
 ./config-node
 ./config-func
