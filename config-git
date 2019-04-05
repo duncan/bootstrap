@@ -13,5 +13,11 @@ cat <<EOF > ~/.gitconfig
 
 [credential]
   helper = netlify
+EOF
+
+if [ `uname` = "Darwin" ]
+then
+cat <<EOF >> ~/.gitconfig
   helper = osxkeychain
 EOF
+fi
