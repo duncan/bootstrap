@@ -7,6 +7,6 @@
 ./javascript
 ./azure
 ./rust
-./config-netlify
+./netlify
 ./macosx
 ./source
