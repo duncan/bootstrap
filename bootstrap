@@ -1,6 +1,6 @@
 #!/bin/sh
 
-./config-brew
+./homebrew
 ./config-zsh
 ./config-git
 ./config-ssh
