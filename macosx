@@ -2,6 +2,14 @@
 
 osascript -e 'tell application "System Preferences" to quit'
 
+# Screen Saver Lock
+defaults write com.apple.screensaver askForPassword -int 1
+defaults write com.apple.screensaver askForPasswordDelay -int 0
+
+# Turn on Firewall
+sudo defaults write /Library/Preferences/com.apple.alf globalstate -int 1
+sudo launchctl load /System/Library/LaunchDaemons/com.apple.alf.agent.plist 2>/dev/null
+
 # Dock
 defaults write com.apple.dock autohide -bool true
 
@@ -16,7 +24,9 @@ defaults write com.apple.desktopservices DSDontWriteUSBStores -bool true
 # Time Machine
 defaults write com.apple.TimeMachine DoNotOfferNewDisksForBackup -bool true
 
-echo "Log out/in for some MacOS settings to take effect"
+# Safari
+defaults write com.apple.Safari com.apple.Safari.ContentPageGroupIdentifier.WebKit2JavaEnabled -bool false
+defaults write com.apple.Safari com.apple.Safari.ContentPageGroupIdentifier.WebKit2JavaEnabledForLocalFiles -bool false
 
 # FileVault
 if [[ `fdesetup status` = "FileVault is On." ]]
@@ -24,5 +34,10 @@ then
 echo "👍 FileVault is enabled, good."
 else 
 echo "⛔️ FileVault needs to be enabled."
-sudo fdsetup enable -user $USER
+sudo fdsetup enable -user $USER  | tee ~/Desktop/"FileVault Recovery Key.txt"
 fi
+
+LOGIN_TEXT="Found this computer? Please contact Duncan Davidson at duncandavidson@me.com"
+sudo defaults write /Library/Preferences/com.apple.loginwindow LoginwindowText "$LOGIN_TEXT"
+
+echo "Log out/in for some MacOS settings to take effect"
