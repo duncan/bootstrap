@@ -1,12 +1,12 @@
 #!/bin/sh
 
-./homebrew
-./shell
-./gitconfig
-./sshconfig
-./javascript
-./azure
-./rust
-./netlify
-./macosx
-./source
+./scripts/homebrew
+./scripts/shell
+./scripts/gitconfig
+./scripts/sshconfig
+./scripts/javascript
+./scripts/azure
+./scripts/rust
+./scripts/netlify
+./scripts/macosx
+./scripts/source
