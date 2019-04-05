@@ -4,7 +4,7 @@ Duncan’s ever-changing machine configuration setup scripts. This version holds
 
 Over time, I’ve used several tools to do this. For a long time, I used a Rakefile. But something about the utility of simple shell scripts ended up winning out as I looked at how to keep this going between Linux (via WSL) and Mac OS X. So I did a big refactor and made this new repository.
 
-Similar repositories: [nnja/new-computer](https://github.com/nnja/new-computer)
+Similar repositories from which I’ve borrowed inspiration and specific items from: [MikeMcQuaid/strap](https://github.com/MikeMcQuaid/strap/blob/master/bin/strap.sh), [nnja/new-computer](https://github.com/nnja/new-computer)
 
 ## Usage (if you’re not duncan)
 
