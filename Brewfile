@@ -12,7 +12,7 @@ brew "jq"
 brew "nvm"
 brew "rbenv"
 brew "go"
-cask "dotnet"
+cask "dotnet-sdk"
 
 if (/darwin/ =~ RUBY_PLATFORM) != nil 
   brew "mas"
