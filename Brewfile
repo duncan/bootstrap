@@ -31,7 +31,6 @@ if (/darwin/ =~ RUBY_PLATFORM) != nil
   mas "Linea Link", id: 1233368267
   mas "Keynote", id: 409183694
   mas "Agenda", id: 1287445660
-  mas "Deckset", id: 847496013
   mas "WiFi Explorer", id: 494803304
   mas "Slack", id: 803453959
 end
