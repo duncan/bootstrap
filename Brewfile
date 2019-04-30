@@ -23,6 +23,8 @@ if (/darwin/ =~ RUBY_PLATFORM) != nil
   cask "google-chrome"
   cask "microsoft-teams"
   cask "zoomus"
+  cask "deckset"
+  cask "numi"
 
   mas "Speedtest", id: 1153157709
   mas "Ulysses", id: 1225570693
@@ -33,4 +35,5 @@ if (/darwin/ =~ RUBY_PLATFORM) != nil
   mas "Agenda", id: 1287445660
   mas "WiFi Explorer", id: 494803304
   mas "Slack", id: 803453959
+  mas "Reeder", id: 1449412482
 end
