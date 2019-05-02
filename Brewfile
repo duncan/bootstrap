@@ -25,6 +25,7 @@ if (/darwin/ =~ RUBY_PLATFORM) != nil
   cask "zoomus"
   cask "deckset"
   cask "numi"
+  cask "expressvpn"
 
   mas "Speedtest", id: 1153157709
   mas "Ulysses", id: 1225570693
