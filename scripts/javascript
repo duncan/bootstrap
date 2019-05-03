@@ -12,11 +12,11 @@ fi
 npmi() {
   if test $2
   then
-    bin=$2
+    b=$2
   else
-    bin=$1
+    b=$1
   fi
-  if test ! $(which $bin)
+  if test ! $(which $b)
   then
     npm install -g $1
   fi

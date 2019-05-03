@@ -1,7 +1,13 @@
 #!/bin/sh
 
-./scripts/homebrew
-./scripts/shell
+if [ `uname` = "Darwin" ]
+then
+  ./scripts/homebrew
+else
+  ./scripts/deb
+fi
+
+./scripts/zsh
 ./scripts/gitconfig
 ./scripts/sshconfig
 ./scripts/javascript
@@ -10,3 +16,4 @@
 ./scripts/netlify
 ./scripts/macosx
 ./scripts/source
+./scripts/shell

@@ -2,5 +2,5 @@
 
 if test ! $(which rustup)
 then
-  curl https://sh.rustup.rs -sSf | sh
+  curl https://sh.rustup.rs -sSf | sh -s -- --no-modify-path
 fi
