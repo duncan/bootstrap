@@ -1,11 +1,10 @@
 #!/bin/bash
 
-
-cp $(dirname $0)/dotfiles/gitconfig ~/.gitconfig
+cp $(dirname $0)/dot-gitconfig ~/.gitconfig
 
 if [ `uname` = "Darwin" ]
 then
-  cat $(dirname $0)/dotfiles/gitconfig-osx >> ~/.gitconfig
+  cat $(dirname $0)/dot-gitconfig-osx >> ~/.gitconfig
 else
-  cat $(dirname $0)/dotfiles/gitconfig-wsl >> ~/.gitconfig
+  cat $(dirname $0)/dot-gitconfig-wsl >> ~/.gitconfig
 fi

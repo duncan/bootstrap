@@ -7,12 +7,16 @@ then
   ./install-homebrew
   ./config-macosx
 else
-  ./bootstrap-ubuntu
+  #./bootstrap-ubuntu
 fi
 
 ./install-git
 ./install-node
 ./install-rust
+
+# make sure that nvm stuff is loaded
+source dotfiles/bashrc
+
 ./install-netlify
 ./install-func
 
