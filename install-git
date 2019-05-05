@@ -5,22 +5,30 @@ then
   if [ ! -f /etc/apt/sources.list.d/git-core-ubuntu-ppa-bionic.list ]
   then
     sudo add-apt-repository ppa:git-core/ppa
+  fi
+
+  if [ ! -f /usr/bin/git ]
+  then
     sudo apt-get install -y git
   fi
 
   if [ ! -f /etc/apt/sources.list.d/github_git-lfs.list ]
   then
     curl -s https://packagecloud.io/install/repositories/github/git-lfs/script.deb.sh | sudo bash
+  fi
+
+  if [ ! -f /usr/bin/git-lfs ]
+  then
     sudo apt-get install -y git-lfs
     git lfs install
   fi
 fi
 
-cp $(dirname $0)/../dotfiles/gitconfig ~/.gitconfig
+cp $(dirname $0)/dotfiles/gitconfig ~/.gitconfig
 
 if [ `uname` = "Darwin" ]
 then
-  cat $(dirname $0)/../dotfiles/gitconfig-osx >> ~/.gitconfig
+  cat $(dirname $0)/dotfiles/gitconfig-osx >> ~/.gitconfig
 else
-  cat $(dirname $0)/../dotfiles/gitconfig-wsl >> ~/.gitconfig
+  cat $(dirname $0)/dotfiles/gitconfig-wsl >> ~/.gitconfig
 fi

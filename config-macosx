@@ -5,6 +5,11 @@ then
     exit
 fi
 
+mkdir -p ~/Source
+touch ~/Source/.metadata_never_index
+
+
+
 osascript -e 'tell application "System Preferences" to quit'
 
 # Screen Saver Lock

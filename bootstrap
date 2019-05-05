@@ -1,23 +1,24 @@
 #!/bin/sh
 
-./scripts/source
+cd $(dirname $0)
 
 if [ `uname` = "Darwin" ]
 then
-  ./scripts/homebrew
-  ./scripts/macosx
-else
-  ./scripts/ubuntu
+  ./install-homebrew
+  ./config-macosx
 fi
 
-./scripts/node
-./scripts/rust
+./install-git
+./install-node
+./install-rust
+./install-netlify
+./install-func
 
-./scripts/netlify
-./scripts/func
+./config-ssh
+./config-git
+./config-bash
 
-# Configurations go last so that we fix anything installers mucked up
-
-./scripts/gitconfig
-./scripts/sshconfig
-./scripts/shell
+if [ `uname` = "Linux" ]
+then
+  ./update-ubuntu
+fi

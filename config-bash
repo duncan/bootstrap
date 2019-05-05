@@ -1,6 +1,6 @@
 #!/bin/sh
 
-cp $(dirname $0)/../dotfiles/bashrc ~/.bashrc
+cp $(dirname $0)/dotfiles/bashrc ~/.bashrc
 
 if [ `uname` = "Darwin" ]
 then
