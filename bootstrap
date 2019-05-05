@@ -15,7 +15,7 @@ fi
 ./install-rust
 
 # make sure that nvm stuff is loaded
-source dotfiles/bashrc
+source ./dot-bashrc
 
 ./install-netlify
 ./install-func
