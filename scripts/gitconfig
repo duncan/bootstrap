@@ -22,4 +22,8 @@ then
 cat <<EOF >> ~/.gitconfig
   helper = osxkeychain
 EOF
+else
+cat <<EOF >> ~/.gitconfig
+  helper = "/mnt/c/Program\\\\ Files/Git/mingw64/libexec/git-core/git-credential-manager.exe"
+EOF
 fi
