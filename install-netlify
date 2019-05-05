@@ -1,5 +1,7 @@
 #!/bin/bash
 
+./install-node
+
 if test ! $(which netlify)
 then
   npm install -g netlify-cli
