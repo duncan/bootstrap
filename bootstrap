@@ -1,19 +1,23 @@
 #!/bin/sh
 
+./scripts/source
+
 if [ `uname` = "Darwin" ]
 then
   ./scripts/homebrew
+  ./scripts/macosx
 else
-  ./scripts/deb
+  ./scripts/ubuntu
 fi
 
-./scripts/zsh
+./scripts/node
+./scripts/rust
+
+./scripts/netlify
+./scripts/func
+
+# Configurations go last so that we fix anything installers mucked up
+
 ./scripts/gitconfig
 ./scripts/sshconfig
-./scripts/javascript
-./scripts/azure
-./scripts/rust
-./scripts/netlify
-./scripts/macosx
-./scripts/source
 ./scripts/shell

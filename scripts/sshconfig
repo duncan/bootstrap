@@ -1,8 +1,16 @@
-#!/bin/sh
+#!/bin/bash
+
+mkdir -p ~/.ssh
 
 cat <<EOF > ~/.ssh/config
 Host *
   AddKeysToAgent yes
-  UseKeychain yes
   IdentityFile ~/.ssh/id_rsa
 EOF
+
+if [ `uname` = "Darwin" ]
+then
+cat <<EOF >> ~/.ssh/config
+  UseKeychain yes
+EOF
+fi

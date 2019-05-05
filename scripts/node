@@ -1,12 +1,10 @@
-#!/bin/sh
+#!/bin/bash
 
-if test ! $(which node)
+if [ ! -d ~/.nvm ]
 then
-  mkdir -p ~/.nvm
-  export NVM_DIR=~/.nvm
-  source $(brew --prefix nvm)/nvm.sh
+  curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.34.0/install.sh | bash
+  source $(dirname $0)/../dotfiles/bashrc
   nvm install --lts
-  npm install -g npm
 fi
 
 npmi() {

@@ -1,4 +1,6 @@
-#!/bin/sh
+#!/bin/bash
+
+# need to ensure that git lfs install is run?
 
 cat <<EOF > ~/.gitconfig
 [filter "lfs"]
