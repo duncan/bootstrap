@@ -1,0 +1,26 @@
+#!/bin/bash
+
+if [ `uname` = "Linux" ]
+then
+  if [ ! -f /etc/apt/sources.list.d/git-core-ubuntu-ppa-bionic.list ]
+  then
+    sudo add-apt-repository ppa:git-core/ppa
+    sudo apt-get install -y git
+  fi
+
+  if [ ! -f /etc/apt/sources.list.d/github_git-lfs.list ]
+  then
+    curl -s https://packagecloud.io/install/repositories/github/git-lfs/script.deb.sh | sudo bash
+    sudo apt-get install -y git-lfs
+    git lfs install
+  fi
+fi
+
+cp $(dirname $0)/../dotfiles/gitconfig ~/.gitconfig
+
+if [ `uname` = "Darwin" ]
+then
+  cat $(dirname $0)/../dotfiles/gitconfig-osx >> ~/.gitconfig
+else
+  cat $(dirname $0)/../dotfiles/gitconfig-wsl >> ~/.gitconfig
+fi
