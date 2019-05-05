@@ -6,6 +6,8 @@ if [ `uname` = "Darwin" ]
 then
   ./install-homebrew
   ./config-macosx
+else
+  ./bootstrap-ubuntu
 fi
 
 ./install-git
