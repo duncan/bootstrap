@@ -3,7 +3,7 @@
 if [ ! -d ~/.nvm ]
 then
   curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.34.0/install.sh | bash
-  source $(dirname $0)/../dotfiles/bashrc
+  source $(dirname $0)/dot-bashrc
   nvm install --lts
 fi
 
